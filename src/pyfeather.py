@@ -1,6 +1,6 @@
 import featherutils
 import os
-
+import sys
 
 def getYieldedTemplate(projPath,file,templateFileName):
 
@@ -48,8 +48,12 @@ def getUpdatedFileContents(projPath, file):
     return ""
         
 
-
-projPath = input("Where is the local HTML/CSS project that you would like PyFeather to build? \n")
+#program starts here
+ 
+if(len(sys.argv) > 1):
+    projPath = str(sys.argv[2])
+else:
+    projPath = input("Where is the local HTML/CSS project that you would like PyFeather to build? \n")
 
 files=featherutils.getFilesAtPath(projPath)
 
