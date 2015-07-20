@@ -26,9 +26,9 @@ def getYieldedTemplate(projPath,file,templateFileName):
 
 
 def exportBuiltFile(projPath,filename,contents):
-    if not os.path.exists(projPath+os.sep+"build"): os.makedirs(projPath+os.sep+"build")
+   # if not os.path.exists(projPath+os.sep+"build"): os.makedirs(projPath+os.sep+"build")
     filename = filename[:filename.find(".fea")] + ".html"
-    target = open(projPath+os.sep+"build"+os.sep+filename, 'w')
+    target = open(projPath+os.sep+filename, 'w')
     target.write(contents)
     
 def getUpdatedFileContents(projPath, file):
@@ -65,4 +65,4 @@ for file in files:
 
 print ("Built project at " + projPath)
 
-k=input("press return to exit")
+#k=input("press return to exit")
